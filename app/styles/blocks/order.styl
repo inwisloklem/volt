@@ -1,0 +1,87 @@
+.order
+  position: relative
+  padding: 0 15px
+  padding-bottom: 35px
+
+  background-color: $tundora
+  background-image: url("../img/bg-order.jpg")
+  
+  &__wrapper
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-bottom: 25px
+
+  &__block
+    display: none
+    
+    @media $desktop
+      display: block
+      position: relative
+      width: 100%
+      max-width: 365px
+      height: 115px
+      background-color: $sunset-orange
+      border-bottom-left-radius: 30px
+      border-bottom-right-radius: 30px
+      color: $white
+      text-align: center
+      font(5em, 115px, 700, uppercase)
+
+      &::before
+        position: absolute
+        left: 0
+        top: -25px
+        width: 100%
+        max-width: 365px
+        height: 25px
+        background-color: $sunset-orange
+        content: ""
+
+  &__element
+    position: absolute
+    top: -25px
+    left: -15px
+
+  &__title
+    color: $white
+    text-align: center
+    font(2.125em, 1.2, 700, uppercase)
+
+    @media $desktop
+      text-align: left
+
+    &:last-of-type
+      margin-bottom: 15px
+      text-align: center
+      font(1.6875em, 1.2, 400, uppercase)
+
+      @media $desktop
+        text-align: left
+
+  &__fn
+    color: $white
+    text-align: center
+    font(0.875em, 1.2, 300, uppercase)
+
+  &__hgroup
+    padding-top: 20px
+    margin: auto
+
+    @media $tablet-desktop
+      text-align: center
+      width: 100%
+      max-width: 745px
+
+  &__hl
+    color: $supernova
+  
+  &__quest
+    margin-bottom: 10px
+    padding-top: 30px
+    text-align: center
+    color: $white
+    font(2.125em, 1.2, 400, uppercase)
+    
+  &__imp
+    font-weight: 700

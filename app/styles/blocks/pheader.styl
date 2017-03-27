@@ -1,0 +1,67 @@
+.pheader
+  padding: 30px 15px
+  background-color: $tundora
+  background-image: linear-gradient(to bottom, $tundora 0, $tundora 25%, $supernova 100%)
+
+  @media $tablet-desktop
+    background-image: url("../img/bg-pheader.jpg")
+    background-size: cover
+    background-position: center top
+
+  &__wrapper
+    margin-bottom: 80px
+    text-align: center
+    
+    @media $tablet-desktop
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      margin-bottom: 30px
+
+  &__inner
+    display: none
+
+    @media $tablet-desktop
+      display: flex
+      flex-direction: row
+
+  &__num
+    align-self: center
+    margin-right: 15px
+    color: $white
+    font(2.25em, 1.2, 300)
+
+    @media $tablet
+      font(1.75em)
+
+  &__menu
+    margin-bottom: 110px
+
+    @media $tablet
+      margin-bottom: 80px
+
+  &__hgroup
+    margin-bottom: 100px
+
+  &__title
+  &__fn
+    margin: auto
+    max-width: 920px
+    color: $white
+    text-align: center
+    text-shadow: 0 0 6px rgba($black, 0.48)
+
+  &__title
+    font(2.25em, 1.2, 900, uppercase)
+
+    @media $tablet
+      font(3.5em, 1.2, 900)
+
+    @media $desktop
+      font(4.5em, 1.2, 900)
+
+  &__fn
+    font(2.25em, 1.2, 400, uppercase)
+    
+    @media $tablet-desktop
+      font(3em, 1.2, 400, uppercase)

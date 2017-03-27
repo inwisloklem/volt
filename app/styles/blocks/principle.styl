@@ -1,0 +1,76 @@
+.principle
+  padding: 40px 0
+  color: $tundora
+  text-align: center
+
+  &__title
+    margin-bottom: 40px
+    color: $tundora
+    text-align: center
+    font(3em, 1.2, 900, uppercase)
+
+  &__list
+    margin-bottom: 40px
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    list-style-type: none
+
+    @media $tablet
+      justify-content: center
+
+    @media $desktop
+      background-image: url("../img/bg-principle.png")
+      background-position: top 120px left 155px
+      background-repeat: no-repeat
+
+  &__item
+    position: relative
+    flex-basis: 100%
+    height: 185px
+    color: $golden-glow
+    font(12.5em, normal, 900)
+
+    @media $tablet
+      flex-basis: 50%
+
+    @media $desktop
+      flex-basis: 33%
+
+      &:nth-of-type(1)
+        order: -7
+      &:nth-of-type(2)
+        order: -6
+      &:nth-of-type(3)
+        order: -5
+      &:nth-of-type(4)
+        margin-right: auto
+        flex-basis: 35%
+        order: -3
+      &:nth-of-type(5)
+        margin-left: auto
+        flex-basis: 35%
+        order: -4
+      &:nth-of-type(6)
+        margin-left: auto
+        order: -2
+      &:nth-of-type(7)
+        order: -1
+
+  &__text
+    position: absolute
+    top: 60%
+    left: 50%
+    width: 300px
+    color: $tundora
+    text-align: center
+    font(1.5rem, 1.2, 700, uppercase)
+
+    transform: translateX(-50%)
+
+  &__icon
+    position: absolute
+    top: 30%
+    left: 50%
+
+    transform: translateX(-50%)

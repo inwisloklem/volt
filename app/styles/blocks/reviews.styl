@@ -1,0 +1,51 @@
+.reviews
+  padding: 40px 0
+  color: $tundora
+
+  &__title
+    margin-bottom: 40px
+    text-align: center
+    font(3em, 1.2, 900, uppercase)
+
+  &__wrapper
+    display: flex
+    flex-direction: column
+    
+    @media $tablet-desktop
+      flex-direction: row
+      flex-wrap: wrap
+
+  &__block
+    margin-bottom: 40px
+    display: flex
+    flex-direction: row
+    align-items: center
+    flex-basis: 50%
+
+    @media $tablet-desktop
+      align-items: flex-start
+
+  &__inner
+    padding: 0 20px
+
+  &__name
+    font(1.5em, 1.2, 700)
+    
+  &__desc
+    margin-bottom: 10px
+    font(1em, 1.2, 700, uppercase)
+
+  &__text
+    margin-bottom: 10px
+    font(1em, 1.2, 300)
+
+  &__brands
+    display: none
+    text-align: center
+    
+    @media $desktop
+      display: block
+
+    img
+      display: inline-block
+      max-width: 100%

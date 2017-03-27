@@ -1,0 +1,21 @@
+.btn
+  box-sizing: border-box
+  display: inline-block
+  padding: 0 35px
+  padding-bottom: 4px
+  border: none
+  border-radius: 30px
+  outline: none
+  text-decoration: none
+  color: $white
+  cursor: pointer
+  background-color: $supernova
+  font(1.125em, 56px, 400, lowercase)
+  box-shadow: inset 0 -7px 0 0 $full-yellow
+
+  transition: all 0.4s ease-in
+  transition-property: box-shadow, background-color
+  
+  &:hover
+    background-color: lighten($supernova, 50%)
+    box-shadow: inset 0 -7px 0 0 lighten($full-yellow, 50%), 0 0 25px 0 $supernova

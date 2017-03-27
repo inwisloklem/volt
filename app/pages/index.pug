@@ -1,0 +1,243 @@
+doctype html
+
+html(lang = "ru")
+  include parts/head.pug
+
+  body
+    include parts/svg-sprite.pug
+
+    header.pheader
+      .container
+        .pheader__wrapper
+          .pheader__image
+            img(src = "img/logo.png", width = 207, height = 50)
+          .pheader__inner
+            span.pheader__num +7 (499) #[strong.pheader__imp 709 80 92]
+
+            a.btn.pheader__btn(href = "#") Заказать звонок
+
+        .menu.pheader__menu
+          ul.menu__list
+            li.menu__item.menu__item--current: a.menu__link Главная
+            li.menu__item: a.menu__link(href = "#about") О компании
+            li.menu__item: a.menu__link(href = "#features") Преимущества
+            li.menu__item: a.menu__link(href = "#principle") Принцип работы
+            li.menu__item: a.menu__link(href = "#works") Наши работы
+            li.menu__item: a.menu__link(href = "#reviews") Отзывы и партнёры
+            li.menu__item: a.menu__link(href = "#contacts") Контакты
+
+        .pheader__hgroup
+          h1.pheader__title
+            | Профессиональный электромонтаж на&nbsp;бизнес объектах
+          h1.pheader__fn с гарантией 10 лет
+
+    main
+      section.order#order
+        .container
+          .order__wrapper
+            .order__block
+              svg.order__element(width = 15, height = 25)
+                use(xlink:href = "#triangle")
+              | Акция!
+            .order__hgroup
+              h2.order__title 
+                | Закажите #[span.order__hl бесплатный выезд инженера]
+              h2.order__title и он будет на вашем объекте #[span.order__hl в течении 3-х часов!]
+              .order__fn * Выезд инженера и проведение замеров производятся бесплатно
+
+          form.form.order__form(action = "#", method = "post")
+            input.form__name(type = "text", name = "name", placeholder = "Ваше имя")
+            input.form__phone(type = "tel", name = "phone", placeholder = "Ваш телефон")
+
+            button.btn.form__btn(type = "submit") Вызвать инженера
+
+      section.about#about
+        .container
+          h2.about__title О компании в цифрах
+
+          ul.about__list
+            li.about__item
+              .about__num 6
+              .about__text лет опыта
+            li.about__item 
+              .about__num 220
+              .about__text проектов
+            li.about__item
+              .about__num 10
+              .about__text лет гарантия
+            li.about__item 
+              .about__num 50
+              .about__text партнёров
+
+      section.features#features
+        .container
+          h2.features__title Преимущества
+
+          ul.features__list
+            li.features__item
+              svg.features__icon(width = 61, height = 59)
+                use(xlink:href = "#icon-features-1")
+              h3.features__name Доступная цена
+              p.features__text
+                | Самая лучшая цена региона в соотношении цена – качество
+            li.features__item
+              svg.features__icon(width = 58, height = 68)
+                use(xlink:href = "#icon-features-2")
+              h3.features__name Мгновенное реагирование
+              p.features__text
+                | Выезд инженера на ваш объект в течение 3 часов после обращения
+            li.features__item
+              svg.features__icon(width = 52, height = 64)
+                use(xlink:href = "#icon-features-3")
+              h3.features__name Оплата за работу берется по факту завершения
+              p.features__text
+                | Прозрачная цена без переплат
+            li.features__item
+              svg.features__icon(width = 66, height = 66)
+                use(xlink:href = "#icon-features-4")
+              h3.features__name Не оставляем ни грязи, ни мусора после себя
+              p.features__text
+                | Прозрачная цена без переплат
+            li.features__item
+              svg.features__icon(width = 48, height = 80)
+                use(xlink:href = "#icon-features-5")
+              h3.features__name Команда экспертов электриков
+              p.features__text
+                | Все электрики дипломированны. Имеют все уровни допусков. В компании более 3 лет
+            li.features__item
+              svg.features__icon(width = 52, height = 72)
+                use(xlink:href = "#icon-features-6")
+              h3.features__name Немецкое оборудование и материалы
+              p.features__text
+                | Оптовая цена на материалы до 15% дешевле магазинов
+
+      section.principle#principle
+        .container
+          h2.principle__title Принцип нашей работы
+
+          ul.principle__list
+            li.principle__item 1
+              svg.principle__icon(width = 50, height = 50)
+                use(xlink:href = "#icon-principle-1")
+              .principle__text Расчет стоимости работ
+            li.principle__item 2
+              svg.principle__icon(width = 51, height = 50)
+                use(xlink:href = "#icon-principle-2")
+              .principle__text Получение технических условий
+            li.principle__item 3
+              svg.principle__icon(width = 57, height = 50)
+                use(xlink:href = "#icon-principle-3")
+              .principle__text Проектирование
+            li.principle__item 4
+              svg.principle__icon(width = 51, height = 50)
+                use(xlink:href = "#icon-principle-4")
+              .principle__text Строительно-монтажные работы
+            li.principle__item 5
+              svg.principle__icon(width = 60, height = 50)
+                use(xlink:href = "#icon-principle-5")
+              .principle__text Согласование проекта
+            li.principle__item 6
+              svg.principle__icon(width = 37, height = 50)
+                use(xlink:href = "#icon-principle-6")
+              .principle__text Сдача объекта
+            li.principle__item 7
+              svg.principle__icon(width = 40, height = 50)
+                use(xlink:href = "#icon-principle-7")
+              .principle__text Получение электроэнергии
+
+        a.btn.principle__btn(href = "#order") Вызвать инженера на объект
+
+      section.works#works
+        h2.works__title Наши работы
+
+        .works__slider
+          img(src = "img/image-works-1.jpg")
+          img(src = "img/image-works-2.jpg")
+          img(src = "img/image-works-3.jpg")
+          img(src = "img/image-works-4.jpg")
+          img(src = "img/image-works-5.jpg")
+
+        a.btn.works__btn(href = "#order") Бесплатный выезд инженера
+
+      section.reviews#reviews
+        .container
+          h2.reviews__title Отзывы и партнёры
+
+          .reviews__wrapper
+            .reviews__block
+              .reviews__image
+                img(src = "img/image-reviews-1.png", width = 155, height = 155, alt = "Хозяйка бара")
+              .reviews__inner
+                .reviews__name Светлана
+                .reviews__desc Хозяйка бара
+                .reviews__text Я открывала новое, очень стильное заведение и по проекту было много светильничков, розеток для клиентов, барная стойка, кухня... 3 раза мне начинали делать электрику и такое чудили, ужас( Профи из «Явольта» просто спасли мой проект — всё сделали аккуратно и так, как было задумано! Огромное им спасибо!
+            .reviews__block
+              .reviews__image
+                img(src = "img/image-reviews-2.png", width = 155, height = 155, alt = "Владелец оптового склада")
+              .reviews__inner
+                .reviews__name Игорь Сергеевич
+                .reviews__desc Владелец оптового склада
+                .reviews__text Новые склады нужно было электрифицировать полностью, «под ключ», как говорится. Объём был большой, но ребята из „ЯВольта“ справились. Главное — не подвели по срокам и качество на уровне!
+            .reviews__block
+              .reviews__image
+                img(src = "img/image-reviews-3.png", width = 155, height = 155, alt = "Разработка мобильных приложений")
+              .reviews__inner
+                .reviews__name Андрей Николаевич
+                .reviews__desc Разработка мобильных приложений
+                .reviews__text В связи с расширением подобрали себе новый большой офис. Помещение хорошее, но условий никаких — розетки, свет, да всё. Через час приехал инженер из «Явольта», при нас сделал расчёт и на 4-й день мы получили рабочий офис, с разводкой под каждого сотрудника. Классная работа, спасибо!
+            .reviews__block
+              .reviews__image
+                img(src = "img/image-reviews-4.png", width = 155, height = 155, alt = "Сеть магазинов")
+              .reviews__inner
+                .reviews__name Владелица магазина
+                .reviews__desc Сеть магазинов
+                .reviews__text Я очень люблю порядок! Ребята приехали в магазин, сделали всё по электрике и убрали после себя. Всё чётко и чисто. Отличная работа, спасибо!
+
+          .reviews__brands
+            img(src = "img/image-brands.jpg", width = 683, height = 138, alt = "Партнёры")
+
+    footer.pfooter
+      section.order
+        .container
+          h2.order__quest
+            | #[span.order__imp Остались вопросы?] мы свяжемся с вами в течение 5 минут
+
+          form.form.order__form(action = "#", method = "post")
+            input.form__name(type = "text", name = "name", placeholder = "Ваше имя")
+            input.form__phone(type = "tel", name = "phone", placeholder = "Ваш телефон")
+
+            button.btn.form__btn(type = "submit") Перезвоните мне
+
+      section.contacts#contacts
+        .container.container--contacts
+          ul.contacts__list
+            li.contacts__item.contacts__item--mail
+              svg.contacts__icon(width = 18, height = 19)
+                use(xlink:href = "#icon-mail")
+              a.contacts__link(href = "mailto:info@yavolt.ru") info@yavolt.ru
+            li.contacts__item.contacts__item--phone +7&nbsp;(499)&nbsp;709&nbsp;80&nbsp;92
+              svg.contacts__icon(width = 17, height = 17)
+                use(xlink:href = "#icon-phone")
+            li.contacts__item.contacts__item--map
+              svg.contacts__icon(width = 17, height = 17)
+                use(xlink:href = "#icon-map")
+              p.contacts__ph
+                | 141202, Московская&nbsp;обл., Пушкинский&nbsp;р-н, г.&nbsp;Пушкино, ул.&nbsp;Институтская, д.&nbsp;12, п.&nbsp;2
+
+              p.contacts__ph
+                | ООО&nbsp;"Я&nbsp;ВОЛЬТ" ОГРН&nbsp;1155038004032 ИНН&nbsp;5038114140 КПП&nbsp;503801001
+
+        .contacts__map
+
+  script(src = "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBuoNB39WCqbDUGWK0Y5zLXS2XPG7QBVCY")
+  script(src = "js/map.js")
+
+  script(src = "//code.jquery.com/jquery-1.11.0.min.js")
+  script(src = "//code.jquery.com/jquery-migrate-1.2.1.min.js")
+  script(src = "js/slick.min.js")
+
+  script
+    | $(".works__slider").slick({
+    |   prevArrow:"<img class='slick-prev' src='img/arrow-left.svg'>",
+    |   nextArrow:"<img class='slick-next' src='img/arrow-right.svg'>"
+    | });

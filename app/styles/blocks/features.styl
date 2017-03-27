@@ -1,0 +1,53 @@
+.features
+  padding: 40px 0
+  color: $white
+  background-color: $tundora
+  
+  @media $tablet-desktop
+    background-image: url("../img/bg-features.jpg")
+    background-size: cover
+    background-position: top center
+
+  &__title
+    margin-bottom: 70px
+    text-align: center
+    font(3em, 1.2, 900, uppercase)
+
+  &__list
+    margin-bottom: -60px
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    list-style-type: none
+  
+  &__item
+    position: relative
+    flex-basis: 100%
+    margin-bottom: 80px
+    padding-top: 100px
+    text-align: center
+
+    @media $tablet
+      flex-basis: 50%
+
+    @media $desktop
+      flex-basis: 33%
+
+  &__name
+  &__text
+    margin: auto
+    max-width: 270px
+
+  &__name
+    margin-bottom: 10px
+    font(1.125em, 1.2, 700, uppercase)
+    
+  &__text
+    font(1em, 1.2, 300)
+
+  &__icon
+    position: absolute
+    top: 0
+    left: 50%
+
+    transform: translateX(-50%)

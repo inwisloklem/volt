@@ -1,0 +1,70 @@
+.contacts
+  color: $white
+
+  &__map
+    height: 500px
+
+  &__list
+    padding: 10px
+    background-color: $tundora
+    list-style-type: none
+
+    @media $tablet
+      display: flex
+      flex-direction: row
+      padding-left: 40px
+
+    @media $desktop
+      position: absolute
+      z-index: 5
+      padding: 50px 25px
+      width: 395px
+      background-color: $mine-shaft
+      border-bottom-left-radius: 30px
+      border-bottom-right-radius: 30px
+
+  &__icon
+    position: absolute
+    left: 10px
+
+    @media $tablet
+      top: -2px
+
+    @media $desktop
+      top: 4px
+
+  &__item
+    position: relative
+    margin-bottom: 10px
+    padding-left: 40px
+    font(1em, 1.2, 300)
+
+    &--mail
+    &--phone
+      font(1.5em, 1.2, 400)
+
+    &--phone
+      font-weight: 400
+
+    &--map
+      .contacts
+        &__icon
+          @media $desktop
+            top: 0
+
+    &:last-of-type
+      margin-bottom: 0
+
+  &__link
+    color: $white
+    text-decoration: none
+    transition: all 0.4s ease-in
+    
+    &:hover
+      color: $supernova
+
+  &__ph
+    margin-bottom: 10px
+    
+    &:last-of-type
+      margin-bottom: 0

@@ -1,0 +1,58 @@
+.menu
+  display: none
+  
+  @media $tablet-desktop
+    display: block
+
+  &__list
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    list-style-type: none
+    border-bottom: 2px solid $white
+
+    @media $tablet
+      flex-wrap: wrap
+      border-bottom: none
+
+  &__item:not(&__item--current)
+    position: relative
+    top: 2px
+    border-bottom: 4px solid transparent
+    transition: all 0.4s ease-in
+
+    @media $tablet
+      border-bottom: none
+
+    &:hover
+      border-bottom: 4px solid $supernova
+
+      @media $tablet
+        border-bottom: none
+
+      .menu
+        &__link
+          color: $supernova
+
+  &__item
+    @media $tablet
+      flex-basis: 33%
+      text-align: center
+
+    &--current
+      @media $tablet
+        display: none
+
+      .menu
+        &__link
+          cursor: default
+
+  &__link
+    display: block
+    padding: 10px 0
+    min-width: 100%
+    color: $white
+    cursor: pointer
+    text-decoration: none
+    font(1em, 1.2, 700, uppercase)
+    transition: all 0.4s ease-in

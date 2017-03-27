@@ -1,0 +1,45 @@
+.about
+  padding: 40px 0
+  color: $tundora
+
+  &__title
+    margin-bottom: 70px
+    color: $tundora
+    text-align: center
+    font(3em, 1.2, 900, uppercase)
+
+  &__list
+    display: flex
+    flex-direction: column
+    list-style-type: none
+
+    @media $tablet-desktop
+      flex-direction: row
+
+  &__item
+    margin-bottom: 60px
+    text-align: center
+    height: 165px
+    flex-basis: 25%
+
+    for $i in 1..4
+      &:nth-of-type({$i})
+        .about
+          &__num
+            background-image: url("../img/bg-about-" + $i + ".svg")
+
+  &__num
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 20px
+    min-width: 165px
+    height: 165px
+    background-size: 165px 165px
+    background-position: center
+    background-repeat: no-repeat
+
+    font(6.25em, normal, 900)
+
+  &__text
+    font(1.5em, normal, 700)
