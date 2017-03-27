@@ -332,14 +332,10 @@ ul {
   font-weight: 300;
   line-height: 1.2;
 }
-.contacts__item--mail,
 .contacts__item--phone {
   font-size: 1.5em;
   font-weight: 400;
   line-height: 1.2;
-}
-.contacts__item--phone {
-  font-weight: 400;
 }
 @media (min-width: 1170px) {
   .contacts__item--map .contacts__icon {
